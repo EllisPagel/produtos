@@ -12,7 +12,11 @@ export class ProductsService {
 
   constructor(private http: HttpClient) {
     this.baseUrl = "http://localhost:4200/api/produtos";
-    this.headers = new HttpHeaders().set('Content-Type', 'application/json').set('Accept', 'application/json').set('Access-Control-Allow-Origin', '*').set('Access-Control-Allow-Headers', '*').set('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS')
+    this.headers = new HttpHeaders().set('Content-Type', 'application/json')
+                                    .set('Accept', 'application/json')
+                                    .set('Access-Control-Allow-Origin', '*')
+                                    .set('Access-Control-Allow-Headers', '*')
+                                    .set('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS')
   }
 
   getAll(){
