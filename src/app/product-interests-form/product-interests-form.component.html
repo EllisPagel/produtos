@@ -1,0 +1,31 @@
+<div class="row mt-3">
+    <div class="col-12">
+        <form>
+            <input type="hidden" name="id" id="id" [(ngModel)]="item.id">
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" id="name" class="form-control" [(ngModel)]="item.name">
+                </div>
+                <div class="form-group col-6">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" class="form-control" [(ngModel)]="item.email">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-12">
+                    <label for="message">Mensagem</label>
+                    <textarea name="message" id="message" class="form-control" rows="5" [(ngModel)]="item.message"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-12">
+        <div class="btn-group float-right">
+            <a [routerLink]="'/produtos/' + item.product_id + '/interesses'" class="btn btn-danger">Cancelar</a>
+            <button type="button" (click)="save()" class="btn btn-success">Salvar</button>
+        </div>
+    </div>
+</div>

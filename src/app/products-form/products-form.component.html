@@ -1,16 +1,35 @@
-<form>
-    <input type="hidden" name="id" id="id" [(ngModel)] = "item.id">
-    <input type="text" name="name" id="name" placeholder="Nome" [(ngModel)] = "item.name">
-    <br>
-    <input type="number" name="price" id="price" placeholder="Preço" [(ngModel)] = "item.price">
-    <br>
-    <textarea name="description" id="description" placeholder="Descrição" [(ngModel)] = "item.description"></textarea>
-    <br>
-    <input type="checkbox" name="active" id="active" [(ngModel)] = "item.active">
-    <label for="active">Ativo</label>
-    <br>
-    <a routerLink="/produtos">Cancelar</a>
-    <br>
-    <button type="button" (click)="save()">Salvar</button>
-
-</form>
+<div class="row mt-3">
+    <div class="col-12">
+        <form>
+            <input type="hidden" name="id" id="id" [(ngModel)] = "item.id">
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" id="name" class="form-control" [(ngModel)] = "item.name">
+                </div>
+                <div class="form-group col-6">
+                    <label for="price">Preço</label>
+                    <input type="number" name="price" id="price" class="form-control" [(ngModel)] = "item.price">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-12">
+                    <label for="description">Descrição</label>
+                    <textarea name="description" id="description" class="form-control" rows="5" [(ngModel)] = "item.description"></textarea>
+                </div>
+            </div> 
+            <div class="custom-control custom-switch">
+                <input type="checkbox" name="active" id="active" class="custom-control-input" [(ngModel)] = "item.active">
+                <label for="active" class="custom-control-label">Ativo</label>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-12">
+        <div class="btn-group float-right">
+            <a routerLink="/produtos" class="btn btn-danger">Cancelar</a>
+            <button type="button"(click)="save()" class="btn btn-success">Salvar</button>
+        </div>
+    </div>
+</div>
